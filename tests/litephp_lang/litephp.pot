@@ -1,0 +1,136 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <ADDRESS/EMAIL/index>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-01-13 11:19+0800\n"
+"PO-Revision-Date: 2019-10-08 22:45+0800\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-KeywordsList: t;_tl\n"
+"X-Poedit-Basepath: ../../..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Last-Translator: sasumi <cnsasumi@gmail.com>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: zh_CN\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: src/Component/File/SpreadsheetImporter.php:33
+msgid "File content empty, please check your file before upload again"
+msgstr ""
+
+#: src/Component/String/Html.php:281
+msgid "Progress max should bigger or equal to zero"
+msgstr ""
+
+#: src/Component/String/Html.php:286
+msgid "Progress value should less or equal than max"
+msgstr ""
+
+#: src/Component/String/Html.php:290
+msgid "Progress value should between 0 to 1"
+msgstr ""
+
+#: src/Component/Upload/Config/BaseConfig.php:86
+msgid "Server allow max upload size in-conformity"
+msgstr ""
+
+#: src/Component/Upload/Config/LocalConfig.php:33
+msgid "Directory create fail:"
+msgstr ""
+
+#: src/Component/Upload/Exception/UploadException.php:11
+msgid "UPLOAD_ERR_INI_SIZE"
+msgstr ""
+
+#: src/Component/Upload/Exception/UploadException.php:12
+msgid "UPLOAD_ERR_FORM_SIZE"
+msgstr ""
+
+#: src/Component/Upload/Exception/UploadException.php:13
+msgid "UPLOAD_ERR_PARTIAL"
+msgstr ""
+
+#: src/Component/Upload/Exception/UploadException.php:14
+msgid "UPLOAD_ERR_NO_FILE"
+msgstr ""
+
+#: src/Component/Upload/Exception/UploadException.php:15
+msgid "UPLOAD_ERR_NO_TMP_DIR"
+msgstr ""
+
+#: src/Component/Upload/Exception/UploadException.php:16
+msgid "UPLOAD_ERR_CANT_WRITE"
+msgstr ""
+
+#: src/Component/Upload/Exception/UploadException.php:17
+msgid "UPLOAD_ERR_EXTENSION"
+msgstr ""
+
+#: src/Component/Upload/Exception/UploadException.php:19
+msgid "UPLOAD_UNKNOWN_ERROR({code})"
+msgstr ""
+
+#: src/Component/Upload/Upload.php:122
+msgid "No upload file detected"
+msgstr ""
+
+#: src/Component/Upload/Upload.php:127
+msgid "Upload file content is empty"
+msgstr ""
+
+#: src/Component/Upload/Upload.php:135
+msgid "Upload file size bigger than config, {file_size} > {max_size}"
+msgstr ""
+
+#: src/Component/Upload/Upload.php:139
+msgid "Upload file size smaller than config {file_size} < {min_size}"
+msgstr ""
+
+#: src/Component/Upload/Upload.php:150
+msgid "Upload file type(mime：{file_mime}) no support by config mime list:{mime_list}"
+msgstr ""
+
+#: src/Component/Upload/Upload.php:162
+msgid "Upload file type(mime：{file_mime}) no support by config extension list:{ext_list}"
+msgstr ""
+
+#: src/Component/Upload/Upload.php:172
+msgid "Upload file type(mime：{file_mime}) must be an image"
+msgstr ""
+
+#: src/Component/Upload/Upload.php:176
+msgid "Image resolution width({width})px less than required:{require_width}px"
+msgstr ""
+
+#: src/Component/Upload/Upload.php:182
+msgid "Image resolution height({height})px less than required:{require_height}px"
+msgstr ""
+
+#: src/Component/Upload/UploadLocal.php:34
+msgid "Upload file move fail: {org_file} => {new_file}"
+msgstr ""
+
+#: src/DB/Driver/DriverPDO.php:103
+msgid "Database connect failed:{error}, HOST：{host}"
+msgstr ""
+
+#: src/DB/Model.php:460
+msgid "Prefetch field:{field} no defined"
+msgstr ""
+
+#: src/DB/Model.php:463
+msgid "Prefetch field:{field} must define foreign|has_one|has_many target"
+msgstr ""
+
+#: test/lang.php:11
+msgid "hello world"
+msgstr ""

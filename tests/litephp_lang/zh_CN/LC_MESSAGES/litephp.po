@@ -1,0 +1,147 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <ADDRESS/EMAIL/index>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-01-13 11:19+0800\n"
+"PO-Revision-Date: 2020-05-04 18:09+0800\n"
+"Last-Translator: sasumi <cnsasumi@outlook.com>\n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-KeywordsList: t\n"
+"X-Poedit-Basepath: ../../..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: src/Component/File/SpreadsheetImporter.php:33
+msgid "File content empty, please check your file before upload again"
+msgstr "文件内容为空，请先检查文件，然后再上传"
+
+#: src/Component/String/Html.php:281
+msgid "Progress max should bigger or equal to zero"
+msgstr "进度最大值应大于或等于零"
+
+#: src/Component/String/Html.php:286
+msgid "Progress value should less or equal than max"
+msgstr "进度值应小于或等于最大值"
+
+#: src/Component/String/Html.php:290
+msgid "Progress value should between 0 to 1"
+msgstr "进度值应介于0到1之间"
+
+#: src/Component/Upload/Config/BaseConfig.php:86
+msgid "Server allow max upload size in-conformity"
+msgstr "服务器允许上传文件大小与程序配置不一致"
+
+#: src/Component/Upload/Config/LocalConfig.php:33
+msgid "Directory create fail:"
+msgstr "上传目录创建失败："
+
+#: src/Component/Upload/Exception/UploadException.php:11
+msgid "UPLOAD_ERR_INI_SIZE"
+msgstr "上传文件大小超出系统配置"
+
+#: src/Component/Upload/Exception/UploadException.php:12
+msgid "UPLOAD_ERR_FORM_SIZE"
+msgstr "文件上传表单"
+
+#: src/Component/Upload/Exception/UploadException.php:13
+msgid "UPLOAD_ERR_PARTIAL"
+msgstr "上传文件发生部分错误"
+
+#: src/Component/Upload/Exception/UploadException.php:14
+msgid "UPLOAD_ERR_NO_FILE"
+msgstr "上传文件丢失"
+
+#: src/Component/Upload/Exception/UploadException.php:15
+msgid "UPLOAD_ERR_NO_TMP_DIR"
+msgstr "上传文件未能找到TMP临时目录"
+
+#: src/Component/Upload/Exception/UploadException.php:16
+msgid "UPLOAD_ERR_CANT_WRITE"
+msgstr "上传文件写入失败"
+
+#: src/Component/Upload/Exception/UploadException.php:17
+msgid "UPLOAD_ERR_EXTENSION"
+msgstr "系统上传文件扩展错误"
+
+#: src/Component/Upload/Exception/UploadException.php:19
+msgid "UPLOAD_UNKNOWN_ERROR({code})"
+msgstr "上传文件系统未知错误（{code}）"
+
+#: src/Component/Upload/Upload.php:122
+msgid "No upload file detected"
+msgstr "找不到上传文件"
+
+#: src/Component/Upload/Upload.php:127
+msgid "Upload file content is empty"
+msgstr "上载文件内容为空"
+
+#: src/Component/Upload/Upload.php:135
+msgid "Upload file size bigger than config, {file_size} > {max_size}"
+msgstr "上传文件大小大于配置，{file_size} > {max_size}"
+
+#: src/Component/Upload/Upload.php:139
+msgid "Upload file size smaller than config {file_size} < {min_size}"
+msgstr "上传文件大小小于配置，{file_size} < {min_size}"
+
+#: src/Component/Upload/Upload.php:150
+msgid ""
+"Upload file type(mime：{file_mime}) no support by config mime list:"
+"{mime_list}"
+msgstr "上传文件类型（mime：{file_mime}）不在系统配置列表中：{mime_list}"
+
+#: src/Component/Upload/Upload.php:162
+msgid ""
+"Upload file type(mime：{file_mime}) no support by config extension list:"
+"{ext_list}"
+msgstr "上传文件类型（mime：{file_mime}）不在系统配置列表中：{ext_list}"
+
+#: src/Component/Upload/Upload.php:172
+msgid "Upload file type(mime：{file_mime}) must be an image"
+msgstr "上传文件（mime：{file_mime}）必须为图片"
+
+#: src/Component/Upload/Upload.php:176
+msgid "Image resolution width({width})px less than required:{require_width}px"
+msgstr "图片分辨率宽（{width} 像素）小于系统要求：{require_width}像素"
+
+#: src/Component/Upload/Upload.php:182
+msgid ""
+"Image resolution height({height})px less than required:{require_height}px"
+msgstr "图片分辨率高（{height} 像素）小于系统要求：{require_height}像素"
+
+#: src/Component/Upload/UploadLocal.php:34
+msgid "Upload file move fail: {org_file} => {new_file}"
+msgstr "上传文件移动失败：{org_file} => {new_file}"
+
+#: src/DB/Driver/DriverPDO.php:103
+msgid "Database connect failed:{error}, HOST：{host}"
+msgstr "数据库连接失败：{error}，主机：{host}"
+
+#: src/DB/Model.php:460
+msgid "Prefetch field:{field} no defined"
+msgstr "预获取字段:{field} 未定义"
+
+#: src/DB/Model.php:463
+msgid "Prefetch field:{field} must define foreign|has_one|has_many target"
+msgstr "预获取字段:{field} 必须定义 foreign|has_one|has_many 属性"
+
+#: test/lang.php:11
+msgid "hello world"
+msgstr "你好，码农"
+
+#~ msgid "Image resolution width({width}) less than required:{require_width}"
+#~ msgstr "图片分辨宽（{width}）小于系统要求：{require_width}"
+
+#~ msgid ""
+#~ "Image resolution height({height}) less than required:{require_height}"
+#~ msgstr "图片分辨高（{height}）小于系统要求：{require_height}"
