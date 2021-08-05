@@ -174,7 +174,7 @@ abstract class Service {
 	}
 
 	/**
-	 * 添加域
+	 * 注册域
 	 * @param string $domain 域
 	 * @param string $path 翻译件路径
 	 * @param array $support_language_list 支持语言列表
@@ -182,22 +182,22 @@ abstract class Service {
 	 * @param string $code_set 编码，缺省为UTF-8（windows暂不支持设定）
 	 * @throws \LFPhp\Pi18N\Exception\LangException
 	 */
-	public static function registerDomain($domain, $path, $support_language_list, $default_language = null, $code_set = 'UTF-8'){
+	public static function register($domain, $path, $support_language_list, $default_language = null, $code_set = 'UTF-8'){
 		if(!bindtextdomain($domain, $path)){
 			throw new LangException("Bind text domain fail, domain:$domain, path:$path");
 		}
 		if($code_set){
 			bind_textdomain_codeset($domain, $code_set);
 		}
-
 		if(!$default_language){
 			$default_language = current($support_language_list);
 		}
-
+		if(!self::getCurrentDomain()){
+			self::setCurrentDomain($domain);
+		}
 		if(!self::$current_language){
 			self::$current_language = $default_language;
 		}
-
 		self::$domain_list[$domain] = [$support_language_list, $default_language];
 	}
 }

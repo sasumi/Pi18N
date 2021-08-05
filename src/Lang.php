@@ -1,6 +1,7 @@
 <?php
 
 namespace LFPhp\Pi18N;
+
 use ArrayAccess;
 use function LFPhp\Func\array_keys_exists;
 
@@ -16,22 +17,15 @@ class Lang implements ArrayAccess {
 	public $private3;
 
 	public function __construct($data = []){
-		$fields = [
-			'language',
-			'script',
-			'region',
-			'variant1',
-			'variant2',
-			'variant3',
-			'private1',
-			'private2',
-			'private3',
-		];
-		foreach($fields as $f){
-			if(isset($data[$f])){
-				$this->{$f} = $data[$f];
-			}
-		}
+		isset($data['language']) && $this->language = $data['language'];
+		isset($data['script']) && $this->script = $data['script'];
+		isset($data['region']) && $this->region = $data['region'];
+		isset($data['variant1']) && $this->variant1 = $data['variant1'];
+		isset($data['variant2']) && $this->variant2 = $data['variant2'];
+		isset($data['variant3']) && $this->variant3 = $data['variant3'];
+		isset($data['private1']) && $this->private1 = $data['private1'];
+		isset($data['private2']) && $this->private2 = $data['private2'];
+		isset($data['private3']) && $this->private3 = $data['private3'];
 	}
 
 	public function offsetExists($offset){
