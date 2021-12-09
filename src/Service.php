@@ -3,7 +3,6 @@ namespace LFPhp\Pi18N;
 
 use LFPhp\Pi18N\Exception\LangException;
 use LFPhp\Pi18N\Exception\LangNoSupportedException;
-use function LFPhp\Func\dump;
 use function LFPhp\Func\server_in_windows;
 
 abstract class Service {
@@ -29,13 +28,13 @@ abstract class Service {
 
 	/**
 	 * 设置当前环境语言
-	 * @param string $language 语言名称，必须在support_language_list里面
+	 * @param Lang $language 语言名称，必须在support_language_list里面
 	 * @param int $category 类目，缺省为所有类目：LC_ALL
 	 * @param bool $force_check_all_domain_support 是否强制检查所有域必须支持
 	 * @return string
 	 * @throws \LFPhp\Pi18N\Exception\LangException
 	 */
-	public static function setCurrentLanguage($language, $category = LC_ALL, $force_check_all_domain_support = false){
+	public static function setCurrentLanguage(Lang $language, $category = LC_ALL, $force_check_all_domain_support = false){
 		if(server_in_windows()){
 			return self::setCurrentLanguageInWindows($language, $category);
 		}
@@ -60,7 +59,9 @@ abstract class Service {
 	 */
 	public static function setCurrentLanguageFromBrowser($support_language_list = []){
 		$accepted = Parser::parseBrowserAcceptLanguages();
-		$language_list = Parser::matches($accepted, $support_language_list ?: self::getAllLanguageList());
+		$supports = Lang::fromStringList($support_language_list ?: self::getAllLanguageList());
+
+		$language_list = Parser::matches($accepted, $supports);
 		return self::setCurrentLanguage($language_list[0]);
 	}
 
@@ -96,7 +97,7 @@ abstract class Service {
 
 	/**
 	 * 获取当前设置语言
-	 * @return string
+	 * @return \LFPhp\Pi18N\Lang
 	 */
 	public static function getCurrentLanguage(){
 		return self::$current_language;
@@ -106,14 +107,14 @@ abstract class Service {
 	 * 临时以指定语种翻译翻译
 	 * @param $text
 	 * @param array $param
-	 * @param string $language
+	 * @param string $lang_str
 	 * @param string $domain
 	 * @return string
 	 * @throws \LFPhp\Pi18N\Exception\LangException
 	 */
-	private static function getTextInLanguageTemporary($text, $param, $language, $domain = ''){
+	private static function getTextInLanguageTemporary($text, $param, $lang_str, $domain = ''){
 		$old_language = self::getCurrentLanguage();
-		self::setCurrentLanguage($language);
+		self::setCurrentLanguage(Lang::fromString($lang_str));
 		$text = Translate::getText($text, $param, $domain);
 		self::setCurrentLanguage($old_language);
 		return $text;
